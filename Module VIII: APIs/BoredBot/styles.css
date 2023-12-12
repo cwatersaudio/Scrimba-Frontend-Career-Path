@@ -1,0 +1,29 @@
+* {
+    font-family: 'Dhurjati', sans-serif;
+}
+
+.app--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    height: 80%;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    padding: 10px;
+}
+
+#boredButton {
+    background-color: darkolivegreen;
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+#idea {
+    font-size: 1.2rem;
+    text-align: center;
+}
