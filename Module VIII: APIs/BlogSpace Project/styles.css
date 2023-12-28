@@ -1,0 +1,14 @@
+nav {
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+    padding-left: 30px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+#blog-list {
+    padding: 30px;
+    font-family: 'Montserrat','sans-serif';
+    font-weight: 100;
+
+}
