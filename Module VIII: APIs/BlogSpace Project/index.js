@@ -1,13 +1,7 @@
-/**
- Challenge:
+const postButtonEl = document.getElementById('post-button')
+const titleEl = document.getElementById("post-title")
+const bodyEl = document.getElementById("post-area")
 
- Style it up!
- 
- * Add a short (~30px height) fixed navbar at the top with the text "BlogSpace". Remember to pad the top of your content so it doesn't get hidden behind the navbar.
- * Add a font from Google Fonts.
- * Any other styling you want to make it look nice!
- 
- */
 
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
@@ -22,4 +16,10 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
             `
         }
         document.getElementById("blog-list").innerHTML = html
+    })
+
+    postButtonEl.addEventListener('click', (event)=> {
+        event.preventDefault()
+        newPost = {title: titleEl.value, body: bodyEl.value}
+        console.log(newPost);
     })
