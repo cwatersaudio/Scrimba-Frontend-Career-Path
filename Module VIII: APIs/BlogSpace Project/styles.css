@@ -12,3 +12,8 @@ nav {
     font-weight: 100;
 
 }
+
+#postInput {
+    display:flex;
+    flex-direction: column;
+}
