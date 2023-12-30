@@ -1,3 +1,11 @@
+.bold {
+    font-weight: 700;
+}
+
+.light {
+    font-weight: 100;
+}
+
 nav {
     font-family: 'Montserrat', sans-serif;
     height: 30px;
@@ -16,4 +24,14 @@ nav {
 #postInput {
     display:flex;
     flex-direction: column;
+    width: 50%;
+    padding: 30px;
+    border-radius: 8px;
+    font-family: 'Montserrat','sans-serif';
 }
+
+#postInput > button {
+margin-left:auto;
+width: 60px;
+}
+
