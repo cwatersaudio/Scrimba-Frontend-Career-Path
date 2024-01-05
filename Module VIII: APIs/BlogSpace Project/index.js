@@ -29,6 +29,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
         document.getElementById("blog-list").innerHTML = html
     })
 
+
     // postButtonEl.addEventListener('click', (event)=> {
     //     event.preventDefault()
     //     newPost = {title: titleEl.value, body: bodyEl.value}
@@ -50,6 +51,16 @@ postFormEl.addEventListener('submit', (event)=> {
             }
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            document.getElementById("blog-list").innerHTML = `
+            <h3>${data.title}</h3>
+            <p>${data.body}</p>
+            <hr />
+            ${document.getElementById("blog-list").innerHTML}
+            `
+            
+        })
         
     }
+ 
