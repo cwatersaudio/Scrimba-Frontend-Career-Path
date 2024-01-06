@@ -3,9 +3,9 @@ const postButtonEl = document.getElementById('post-button')
 const titleEl = document.getElementById("post-title")
 const bodyEl = document.getElementById("post-area")
 const postFormEl = document.getElementById("postInput")
-const postList = document.getElementById("blog-list")
+const postListEl = document.getElementById("blog-list")
 
-let postArr = []
+let postsArr = []
 function renderPosts() {
     let html = ""
     for (let post of postsArr) {
@@ -15,7 +15,7 @@ function renderPosts() {
             <hr />
          `
     }
-    postList.innerHTML = html
+    postListEl.innerHTML = html
 }
 
 
@@ -45,13 +45,9 @@ postFormEl.addEventListener('submit', (event)=> {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-            document.getElementById("blog-list").innerHTML = `
-            <h3>${data.title}</h3>
-            <p>${data.body}</p>
-            <hr />
-            ${document.getElementById("blog-list").innerHTML}
-            `
+            postsArr.unshift(data)
+            console.log(postsArr);
+            renderPosts()
             
         })
         
