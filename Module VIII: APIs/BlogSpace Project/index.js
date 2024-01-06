@@ -48,6 +48,7 @@ postFormEl.addEventListener('submit', (event)=> {
             postsArr.unshift(data)
             console.log(postsArr);
             renderPosts()
+            postFormEl.reset()
             
         })
         
