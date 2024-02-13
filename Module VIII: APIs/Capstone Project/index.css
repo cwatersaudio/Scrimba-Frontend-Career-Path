@@ -31,3 +31,8 @@ div.top {
 h1.time {
     text-align: center;
 }
+
+#cryptoWatchlist>li {
+    display: flex;
+    gap: 5px;
+}
