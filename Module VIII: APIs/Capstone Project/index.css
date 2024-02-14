@@ -32,7 +32,17 @@ h1.time {
     text-align: center;
 }
 
+.crypto--watchlist {
+    list-style: none;
+}
+
 #cryptoWatchlist>li {
     display: flex;
     gap: 5px;
+    align-items: top;
+}
+
+.crypto--prices {
+    display: flex;
+    flex-direction: column;
 }
