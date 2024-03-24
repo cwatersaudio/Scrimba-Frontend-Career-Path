@@ -1,4 +1,5 @@
 const crypto1El = document.getElementById("crypto1");
+let location = { lat: "", lon: "" };
 
 function updateTime(time) {
 	const now = new Date().toLocaleTimeString();
@@ -46,5 +47,23 @@ function getCryptoData(coin) {
 		.catch((err) => console.warn("there was an error"));
 }
 
+function success(pos) {
+	const crd = pos.coords;
+	lat = pos.latitude;
+	lon = pos.longitude;
+	console.log("Your current position is:");
+	console.log(`Latitude : ${crd.latitude}`);
+	console.log(`Longitude: ${crd.longitude}`);
+	console.log(`More or less ${crd.accuracy} meters.`);
+}
+navigator.geolocation.getCurrentPosition(success);
+
+async function getWeather() {
+	const res = await fetch(
+		`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={API key}`,
+	);
+	const data = await res.json();
+	console.log(data);
+}
 getCryptoData("ethereum");
 setInterval(updateTime, 500);

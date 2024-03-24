@@ -28,8 +28,8 @@ div.top {
     justify-content: space-between;
 }
 
-h1.time {
-    text-align: center;
+#currentTime {
+    align-self: center;
 }
 
 .crypto--watchlist {
